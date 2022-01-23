@@ -8,4 +8,4 @@ Only 64 bit: no
 
 Сontains proprietary software: no
 
-Description: Stryker module for alpine linux GUI installation
+Description: Stryker module for alpine linux GUI installation (VNC). Default password — stryker 

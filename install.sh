@@ -4,11 +4,12 @@ apk update
 apk add sudo
 DISPLAY=:1
 RESOLUTION=1920x1080x24
+PASS=stryker
 
 apk add --no-cache ca-certificates curl openssl xvfb x11vnc xfce4 xfce4-terminal faenza-icon-theme dbus-x11 bash
 
 echo ""
-[ ! -f /root/.vnc/passwd ] && echo "No previous VNC password found. Setting andronix as default password!" && mkdir -p /root/.vnc && x11vnc -storepasswd stryker /root/.vnc/passwd || echo "Previously generated password found. Keeping your old password"
+[ ! -f /root/.vnc/passwd ] && echo "No previous VNC password found. Setting $PASS as default password!" && mkdir -p /root/.vnc && x11vnc -storepasswd $PASS /root/.vnc/passwd || echo "Previously generated password found. Keeping your old password"
 echo ""
 
 echo "#!/bin/bash
